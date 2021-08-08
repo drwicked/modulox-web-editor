@@ -293,11 +293,11 @@ position: absolute;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.onglets{
+.tabs{
 	width:1200px;
 }
 		
-.onglet{
+.tab{
 	position: relative;
 	top:0px;
 	left:0px;
@@ -316,22 +316,22 @@ position: absolute;
 	display: inline-block;
 	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
 }
-.onglet_0{
+.tab_0{
 	background:#888;
 	border-bottom:1px solid black;
 }
-.onglet_1{
+.tab_1{
 	background:#555;
 	border-bottom:0px solid black;
 	/*padding-bottom:4px;*/
 }
 
-.contenu_onglets{
+.contenu_tabs{
 	margin-left: 315px;
 	width: 1000px;
 }
 
-.contenu_onglet{
+.contenu_tab{
 	position: relative;
 	top:0px;
 	left:0px;

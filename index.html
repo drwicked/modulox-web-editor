@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <!-- saved from url=(0030)https://raspiaudio.com/editor/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
-        <link rel="stylesheet" type="text/css" href="./static/style.css">
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="./static/style.css">
 		<link rel="stylesheet" href="./static/huebee.css" media="screen">
-		</head><body style=""><div>Modulox Editor v0.38</div>
-		
-    
-    
-		
+	</head>
+	<body style="">
+		<div>Modulox Editor v0.38</div>
 		<tools>
 			<select id="myselect"><option value="0">STM32 Audio Class</option></select>
 			<button id="button" type="button" title="Press here to connect to modulox and load all the modules data" style="background-color: rgb(17, 170, 17);">Connected</button>
@@ -23,48 +22,49 @@
 				<option value="0"></option>
 				<option value="1">All Toggle</option>
 				<option value="2">Sequencer</option>
-				<option value="3">Vu metre</option>
+				<option value="3">VU Meter</option>
 			</select>
 			<div id="Set_text3"></div>
 			<!-- <div id="ableton"><a href="https://modulox.fr/editor/modulox.zip">ableton plugin</a></div>-->
 			<div class="help-tip" id="help4">
-				<p>Les patchs sont des paramètres préprogrammés pour des synthés ou des applications précises. Il faut connecter un nombre de module comme indiqué entre parenthèses.
-					<br><b>Mix </b>permet de contrôler une appli de mixage de DJ. <a href="https://modulox.fr/mix/">Retrouvez-là ici</a>
+				<p>Patches are pre-programmed parameters for specific synths or applications. You must connect a number of modules as indicated in brackets.
+					<br><b>Mix </b>allows you to control a DJ mixer app. <a href="https://modulox.fr/mix/">Find it here</a>
 				</p>
 			</div>
 			<div class="help-tip" id="help3">
-				<p>Les <b>presets</b> s'appliquent à tout type de configuration. Par exemple il peut mettre des Toggle sur toute la première ligne en incrémentant les notes MIDI (1,2,3...).
-					<br>Les <b>patchs</b> chargent une configuration bien précise que vous avez sauvegardée. Il faut exactement le même nombre de modules branchés que pour la configuration sauvegardée.
-					<br>Pour vous simplifier la tâche, vous pouvez charger un preset se rapprochant de ce que vous voulez faire, puis modifier les paramètres à votre guise, et sauvegarder le patch ainsi créé.
+				<p>The <b>presets</b> apply to any type of configuration. For example, he can put Toggles on the entire first line by incrementing the MIDI notes (1,2,3 ...).
+					<br>The <b>patches</b> load a specific configuration that you have saved. You need exactly the same number of connected modules as for the saved configuration.
+					<br>To make things easier for you, you can load a preset that is close to what you want to do, then modify the parameters as you wish, and save the patch thus created.
 				</p>
 			</div>
 			<div class="help-tip" id="help1">
-				<p>Quand vous connectez un appareil USB, il apparaît dans la liste. Pour se connecter au modulox il faut sélectionner STM32 AUDIO USB, puis cliquer sur <b>Connecter</b>.
-					<br>Les modules apparaissent alors dans l'interface et vous pouvez les configurer. Pour sauvegarder la configuration dans le module, il faut cliquer sur le bouton <b>Write</b>
+				<p>
+					When you connect a USB device, it appears in the list. To connect to the modulox, select STM32 AUDIO USB, then click on <b>Connect</b>.
+					<br>The modules then appear in the interface and you can configure them. To save the configuration in the module, click on the <b>Write</b> button
 				</p>
-			</div>	
-		</tools>
-		<div class="systeme_onglets">
-			<div class="onglets" id="ong">
-				<span class="onglet_0 onglet" id="onglet_Set">Set</span>
-				<span class="onglet_1 onglet" id="onglet_MIDI">MIDI</span>
-				<span class="onglet_0 onglet" id="onglet_Console">Console</span>
-				<span class="onglet_0 onglet" id="onglet_Sequence" style="display: none;">Sequence</span>
-				<span class="onglet_0 onglet" id="onglet_Arpegio" style="display: inline-block;">Arpegio</span>
-				<span class="onglet_0 onglet" id="onglet_Module">Module</span>
 			</div>
-			<div class="contenu_onglets">
-				<div class="contenu_onglet" id="contenu_onglet_Set" style="display: none;">
-					<div id="Set_text">Tous les modules sont placés. Aller dans l'onglet -MIDI- pour paramétrer les modules.</div>
+		</tools>
+		<div class="systeme_tabs">
+			<div class="tabs" id="ong">
+				<span class="tab_0 tab" id="tab_Set">Set</span>
+				<span class="tab_1 tab" id="tab_MIDI">MIDI</span>
+				<span class="tab_0 tab" id="tab_Console">Console</span>
+				<span class="tab_0 tab" id="tab_Sequence" style="display: none;">Sequence</span>
+				<span class="tab_0 tab" id="tab_Arpegio" style="display: inline-block;">Arpeggio</span>
+				<span class="tab_0 tab" id="tab_Module">Module</span>
+			</div>
+			<div class="contenu_tabs">
+				<div class="contenu_tab" id="contenu_tab_Set" style="display: none;">
+					<div id="Set_text">All modules are placed. Go to the -MIDI- tab to configure the modules.</div>
 					<canvas id="canvas" width="800" height="600">
-						<p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+						<p>Sorry, your browser does not support Canvas.</p>
 					</canvas>
 				</div>
-				<div class="contenu_onglet" id="contenu_onglet_MIDI" style="display: block;">
-					<p id="MIDI_text">Cliquer sur un encodeur pour modifier ses paramètres</p>
-	
+				<div class="contenu_tab" id="contenu_tab_MIDI" style="display: block;">
+					<p id="MIDI_text">Click on an encoder to modify its parameters</p>
+
 					<canvas id="canvas2" width="600" height="600">
-						<p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+						<p>Sorry, your browser does not support Canvas.</p>
 					</canvas>
 					<div id="midi-options" style="position: relative;">
 						<div id="mode_text" class="label-midi" style="display: block;">Mode</div>
@@ -74,7 +74,7 @@
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
-						</select> 
+						</select>
 						<div id="channel_text" class="label-midi" style="display: block;">Channel</div>
 						<select id="channel" style="display: inline-block;"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option></select>
 						<div id="luminosity_text" class="label-midi" style="display: block;">LED Luminosity</div>
@@ -88,13 +88,13 @@
 							<select id="midi1_value" style="background: rgb(255, 0, 0); color: rgb(255, 255, 255); display: block;"><option value="1">CC 1</option><option value="2">CC 2</option><option value="3">CC 3</option><option value="4">CC 4</option><option value="5">CC 5</option><option value="6">CC 6</option><option value="7">CC 7</option><option value="8">CC 8</option><option value="9">CC 9</option><option value="10">CC 10</option><option value="11">CC 11</option><option value="12">CC 12</option><option value="13">CC 13</option><option value="14">CC 14</option><option value="15">CC 15</option><option value="16">CC 16</option><option value="17">CC 17</option><option value="18">CC 18</option><option value="19">CC 19</option><option value="20">CC 20</option><option value="21">CC 21</option><option value="22">CC 22</option><option value="23">CC 23</option><option value="24">CC 24</option><option value="25">CC 25</option><option value="26">CC 26</option><option value="27">CC 27</option><option value="28">CC 28</option><option value="29">CC 29</option><option value="30">CC 30</option><option value="31">CC 31</option><option value="32">CC 32</option><option value="33">CC 33</option><option value="34">CC 34</option><option value="35">CC 35</option><option value="36">CC 36</option><option value="37">CC 37</option><option value="38">CC 38</option><option value="39">CC 39</option><option value="40">CC 40</option><option value="41">CC 41</option><option value="42">CC 42</option><option value="43">CC 43</option><option value="44">CC 44</option><option value="45">CC 45</option><option value="46">CC 46</option><option value="47">CC 47</option><option value="48">CC 48</option><option value="49">CC 49</option><option value="50">CC 50</option><option value="51">CC 51</option><option value="52">CC 52</option><option value="53">CC 53</option><option value="54">CC 54</option><option value="55">CC 55</option><option value="56">CC 56</option><option value="57">CC 57</option><option value="58">CC 58</option><option value="59">CC 59</option><option value="60">CC 60</option><option value="61">CC 61</option><option value="62">CC 62</option><option value="63">CC 63</option><option value="64">CC 64</option><option value="65">CC 65</option><option value="66">CC 66</option><option value="67">CC 67</option><option value="68">CC 68</option><option value="69">CC 69</option><option value="70">CC 70</option><option value="71">CC 71</option><option value="72">CC 72</option><option value="73">CC 73</option><option value="74">CC 74</option><option value="75">CC 75</option><option value="76">CC 76</option><option value="77">CC 77</option><option value="78">CC 78</option><option value="79">CC 79</option><option value="80">CC 80</option><option value="81">CC 81</option><option value="82">CC 82</option><option value="83">CC 83</option><option value="84">CC 84</option><option value="85">CC 85</option><option value="86">CC 86</option><option value="87">CC 87</option><option value="88">CC 88</option><option value="89">CC 89</option><option value="90">CC 90</option><option value="91">CC 91</option><option value="92">CC 92</option><option value="93">CC 93</option><option value="94">CC 94</option><option value="95">CC 95</option><option value="96">CC 96</option><option value="97">CC 97</option><option value="98">CC 98</option><option value="99">CC 99</option><option value="100">CC 100</option><option value="101">CC 101</option><option value="102">CC 102</option><option value="103">CC 103</option><option value="104">CC 104</option><option value="105">CC 105</option><option value="106">CC 106</option><option value="107">CC 107</option><option value="108">CC 108</option><option value="109">CC 109</option><option value="110">CC 110</option><option value="111">CC 111</option><option value="112">CC 112</option><option value="113">CC 113</option><option value="114">CC 114</option><option value="115">CC 115</option><option value="116">CC 116</option><option value="117">CC 117</option><option value="118">CC 118</option><option value="119">CC 119</option><option value="120">CC 120</option><option value="121">CC 121</option><option value="122">CC 122</option><option value="123">CC 123</option><option value="124">CC 124</option><option value="125">CC 125</option><option value="126">CC 126</option><option value="127">CC 127</option></select>
 							<!-- <input id="midi1_color" type="color" /> -->
 							<button id="button10" type="button10" title="Details" style="display: block;">Details</button>
-						</div>	
+						</div>
 						<div>
 							<div id="midi2_text" class="label-midi" style="display: block;">Turn - CC</div>
 							<select id="midi2_value" style="background: rgb(0, 254, 0); color: rgb(0, 0, 0); display: block;"><option value="1">CC 1</option><option value="2">CC 2</option><option value="3">CC 3</option><option value="4">CC 4</option><option value="5">CC 5</option><option value="6">CC 6</option><option value="7">CC 7</option><option value="8">CC 8</option><option value="9">CC 9</option><option value="10">CC 10</option><option value="11">CC 11</option><option value="12">CC 12</option><option value="13">CC 13</option><option value="14">CC 14</option><option value="15">CC 15</option><option value="16">CC 16</option><option value="17">CC 17</option><option value="18">CC 18</option><option value="19">CC 19</option><option value="20">CC 20</option><option value="21">CC 21</option><option value="22">CC 22</option><option value="23">CC 23</option><option value="24">CC 24</option><option value="25">CC 25</option><option value="26">CC 26</option><option value="27">CC 27</option><option value="28">CC 28</option><option value="29">CC 29</option><option value="30">CC 30</option><option value="31">CC 31</option><option value="32">CC 32</option><option value="33">CC 33</option><option value="34">CC 34</option><option value="35">CC 35</option><option value="36">CC 36</option><option value="37">CC 37</option><option value="38">CC 38</option><option value="39">CC 39</option><option value="40">CC 40</option><option value="41">CC 41</option><option value="42">CC 42</option><option value="43">CC 43</option><option value="44">CC 44</option><option value="45">CC 45</option><option value="46">CC 46</option><option value="47">CC 47</option><option value="48">CC 48</option><option value="49">CC 49</option><option value="50">CC 50</option><option value="51">CC 51</option><option value="52">CC 52</option><option value="53">CC 53</option><option value="54">CC 54</option><option value="55">CC 55</option><option value="56">CC 56</option><option value="57">CC 57</option><option value="58">CC 58</option><option value="59">CC 59</option><option value="60">CC 60</option><option value="61">CC 61</option><option value="62">CC 62</option><option value="63">CC 63</option><option value="64">CC 64</option><option value="65">CC 65</option><option value="66">CC 66</option><option value="67">CC 67</option><option value="68">CC 68</option><option value="69">CC 69</option><option value="70">CC 70</option><option value="71">CC 71</option><option value="72">CC 72</option><option value="73">CC 73</option><option value="74">CC 74</option><option value="75">CC 75</option><option value="76">CC 76</option><option value="77">CC 77</option><option value="78">CC 78</option><option value="79">CC 79</option><option value="80">CC 80</option><option value="81">CC 81</option><option value="82">CC 82</option><option value="83">CC 83</option><option value="84">CC 84</option><option value="85">CC 85</option><option value="86">CC 86</option><option value="87">CC 87</option><option value="88">CC 88</option><option value="89">CC 89</option><option value="90">CC 90</option><option value="91">CC 91</option><option value="92">CC 92</option><option value="93">CC 93</option><option value="94">CC 94</option><option value="95">CC 95</option><option value="96">CC 96</option><option value="97">CC 97</option><option value="98">CC 98</option><option value="99">CC 99</option><option value="100">CC 100</option><option value="101">CC 101</option><option value="102">CC 102</option><option value="103">CC 103</option><option value="104">CC 104</option><option value="105">CC 105</option><option value="106">CC 106</option><option value="107">CC 107</option><option value="108">CC 108</option><option value="109">CC 109</option><option value="110">CC 110</option><option value="111">CC 111</option><option value="112">CC 112</option><option value="113">CC 113</option><option value="114">CC 114</option><option value="115">CC 115</option><option value="116">CC 116</option><option value="117">CC 117</option><option value="118">CC 118</option><option value="119">CC 119</option><option value="120">CC 120</option><option value="121">CC 121</option><option value="122">CC 122</option><option value="123">CC 123</option><option value="124">CC 124</option><option value="125">CC 125</option><option value="126">CC 126</option><option value="127">CC 127</option></select>
 							<button id="button11" type="button11" title="Details" style="display: block;">Details</button>
 						</div>
-						
+
 						<div>
 							<div id="midi3_text" class="label-midi" style="display: block;">Turn - CC</div>
 							<select id="midi3_value" style="background: rgb(0, 0, 255); color: rgb(255, 255, 255);"><option value="1">CC 1</option><option value="2">CC 2</option><option value="3">CC 3</option><option value="4">CC 4</option><option value="5">CC 5</option><option value="6">CC 6</option><option value="7">CC 7</option><option value="8">CC 8</option><option value="9">CC 9</option><option value="10">CC 10</option><option value="11">CC 11</option><option value="12">CC 12</option><option value="13">CC 13</option><option value="14">CC 14</option><option value="15">CC 15</option><option value="16">CC 16</option><option value="17">CC 17</option><option value="18">CC 18</option><option value="19">CC 19</option><option value="20">CC 20</option><option value="21">CC 21</option><option value="22">CC 22</option><option value="23">CC 23</option><option value="24">CC 24</option><option value="25">CC 25</option><option value="26">CC 26</option><option value="27">CC 27</option><option value="28">CC 28</option><option value="29">CC 29</option><option value="30">CC 30</option><option value="31">CC 31</option><option value="32">CC 32</option><option value="33">CC 33</option><option value="34">CC 34</option><option value="35">CC 35</option><option value="36">CC 36</option><option value="37">CC 37</option><option value="38">CC 38</option><option value="39">CC 39</option><option value="40">CC 40</option><option value="41">CC 41</option><option value="42">CC 42</option><option value="43">CC 43</option><option value="44">CC 44</option><option value="45">CC 45</option><option value="46">CC 46</option><option value="47">CC 47</option><option value="48">CC 48</option><option value="49">CC 49</option><option value="50">CC 50</option><option value="51">CC 51</option><option value="52">CC 52</option><option value="53">CC 53</option><option value="54">CC 54</option><option value="55">CC 55</option><option value="56">CC 56</option><option value="57">CC 57</option><option value="58">CC 58</option><option value="59">CC 59</option><option value="60">CC 60</option><option value="61">CC 61</option><option value="62">CC 62</option><option value="63">CC 63</option><option value="64">CC 64</option><option value="65">CC 65</option><option value="66">CC 66</option><option value="67">CC 67</option><option value="68">CC 68</option><option value="69">CC 69</option><option value="70">CC 70</option><option value="71">CC 71</option><option value="72">CC 72</option><option value="73">CC 73</option><option value="74">CC 74</option><option value="75">CC 75</option><option value="76">CC 76</option><option value="77">CC 77</option><option value="78">CC 78</option><option value="79">CC 79</option><option value="80">CC 80</option><option value="81">CC 81</option><option value="82">CC 82</option><option value="83">CC 83</option><option value="84">CC 84</option><option value="85">CC 85</option><option value="86">CC 86</option><option value="87">CC 87</option><option value="88">CC 88</option><option value="89">CC 89</option><option value="90">CC 90</option><option value="91">CC 91</option><option value="92">CC 92</option><option value="93">CC 93</option><option value="94">CC 94</option><option value="95">CC 95</option><option value="96">CC 96</option><option value="97">CC 97</option><option value="98">CC 98</option><option value="99">CC 99</option><option value="100">CC 100</option><option value="101">CC 101</option><option value="102">CC 102</option><option value="103">CC 103</option><option value="104">CC 104</option><option value="105">CC 105</option><option value="106">CC 106</option><option value="107">CC 107</option><option value="108">CC 108</option><option value="109">CC 109</option><option value="110">CC 110</option><option value="111">CC 111</option><option value="112">CC 112</option><option value="113">CC 113</option><option value="114">CC 114</option><option value="115">CC 115</option><option value="116">CC 116</option><option value="117">CC 117</option><option value="118">CC 118</option><option value="119">CC 119</option><option value="120">CC 120</option><option value="121">CC 121</option><option value="122">CC 122</option><option value="123">CC 123</option><option value="124">CC 124</option><option value="125">CC 125</option><option value="126">CC 126</option><option value="127">CC 127</option></select>
@@ -119,23 +119,23 @@
 						<select id="advanced4_value" style="display: block;"><option value="1">Logarithmic</option><option value="0">Normal</option><option value="4">Relative1</option><option value="5">Relative2</option><option value="6">Relative3</option><option value="3">Sequencer</option></select>
 						<div id="color_text" style="display: block;">color</div>
 						<input class="color-input" id="midi1_color" style="display: block; background-color: rgb(0, 0, 255); color: white;">
-					</div>	
+					</div>
 					<div class="help-tip" id="help2">
 						<p>
-							<b>. Toggle  : </b>  C'est un mode ON/OFF. Quand le bouton est sur ON, il prend la couleur définie pour le Press1, et le signal MIDI CC est envoyé quand on tourne le potentiomètre. Quand le bouton est OFF, il prend la couleur définie pour Press2, et le signal MIDI CC n'est plus envoyé quand on tourne le potentiomètre.
-							<br> Deux notes MIDI différentes peuvent être définies quand on passe en ON ou OFF. Ce sont les notes pour Press1 et Press2.
-							<br><b>. Momentary  : </b> C'est un mode bouton-poussoir : quand on appuye sur le bouton, une note MIDI (Press) est envoyée. Et quand on le relâche, une note MIDI (Release) est aussi envoyée. Vous pouvez envoyer le signal NOTE OFF de la note envoyée en poussant le bouton, ou tout autre note (utile pour les DAW).
-							<br><b>. Selector  : </b> C'est un mode multi-switch, donnant plusieurs états au bouton. Par exemple, quand vous cliquez une fois la note 1 est envoyée, et le bouton devient vert, une deuxième fois c'est la note 12 et le bouton est rouge, une troisième fois la note 5 et le bouton est jaune. Le nombre à côté du mode permet de choisir combien d'états différents on veut pouvoir avoir. A noter que le signal CC envoyé en tournant le bouton est toujours le même dans ce mode.
-							<br><b>. Select CC : </b> Même principe que le précédent mode, on peut avoir plusieurs états. Mais quand on change le mode, aucune note MIDI n'est envoyée. Par contre le signal CC envoyé à la rotation du bouton est différent pour chaque état.
+							<b>. Toggle  : </b>  ON / OFF mode. When the button is ON, it takes on the color defined for Press1, and the MIDI CC signal is sent when the potentiometer is turned. When the button is OFF, it takes on the color defined for Press2, and the MIDI CC signal is no longer sent when the encoder is turned.
+							<br> Two different MIDI notes can be defined when switching ON or OFF. These are the notes for Press1 and Press2.
+							<br><b>. Momentary  : </b> Push-button mode: when the button is pressed, a MIDI note (Press) is sent. And when it is released, a MIDI note (Release) is also sent. You can send the NOTE OFF signal of the note sent by pushing the button, or any other note (useful for DAWs).
+							<br><b>. Selector  : </b> Multi-switch mode, giving several states to the button. For example, when you click once note 1 is sent, and the button turns green, a second time it's note 12 and the button is red, a third time note 5 and the button is yellow. The number next to the mode allows you to choose how many different states you want to be able to have. Note that the DC signal sent by turning the knob is always the same in this mode.
+							<br><b>. Select CC : </b> Same principle as the previous mode, we can have several states. But when you change the mode, no MIDI note is sent. On the other hand, the DC signal sent when the button is turned is different for each state.
 						</p>
 					</div>
 					<div style="clear:both;"></div>
 
 				</div>
-				<div class="contenu_onglet" id="contenu_onglet_Console">
-					<div id="Set_text2"> channel 0; type inconnu; note 5; velocity 0</div>
+				<div class="contenu_tab" id="contenu_tab_Console">
+					<div id="Set_text2"> channel 0; type unknown; note 5; velocity 0</div>
 				</div>
-				<div class="contenu_onglet" id="contenu_onglet_Sequence">
+				<div class="contenu_tab" id="contenu_tab_Sequence">
 					<div>
 						<div id="Seq_num_text">Sequence number</div>
 						<select id="Seq_num"><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option><option value="5">6</option><option value="6">7</option><option value="7">8</option></select>
@@ -143,7 +143,7 @@
 						<input id="Seq_num_mes" type="number" name="points" step="1" max="4" min="1" value="1">
 					</div>
 					<canvas id="canvas3" width="680" height="400">
-						<p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+						<p>Sorry, your browser does not support Canvas.</p>
 					</canvas>
 					<div id="Seq1_note_text">Note</div>
 					<select id="Seq1_note"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option><option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option><option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option><option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option><option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option><option value="100">100</option><option value="101">101</option><option value="102">102</option><option value="103">103</option><option value="104">104</option><option value="105">105</option><option value="106">106</option><option value="107">107</option><option value="108">108</option><option value="109">109</option><option value="110">110</option><option value="111">111</option><option value="112">112</option><option value="113">113</option><option value="114">114</option><option value="115">115</option><option value="116">116</option><option value="117">117</option><option value="118">118</option><option value="119">119</option><option value="120">120</option><option value="121">121</option><option value="122">122</option><option value="123">123</option><option value="124">124</option><option value="125">125</option><option value="126">126</option><option value="127">127</option></select>
@@ -162,16 +162,16 @@
 					<div id="Seq4_chan_text">Chan</div>
 					<select id="Seq4_chan"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option></select>
 				</div>
-				<div class="contenu_onglet" id="contenu_onglet_Arpegio">
+				<div class="contenu_tab" id="contenu_tab_Arpegio">
 					<div>
-						<div id="Seq_num_text">Arpegio number</div>
+						<div id="Seq_num_text">Arpeggio number</div>
 						<select id="Arp_num"><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option><option value="5">6</option><option value="6">7</option><option value="7">8</option></select>
 					</div>
 					<canvas id="canvas4" width="800" height="500">
-						<p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+						<p>Sorry, your browser does not support Canvas.</p>
 					</canvas>
 				</div>
-				<div class="contenu_onglet" id="contenu_onglet_Module">
+				<div class="contenu_tab" id="contenu_tab_Module">
 					<div id="mode_text" class="label-midi">MIDI OUT</div>
 					<select id="midi_out">
 						<option value="0">USB</option>
@@ -192,13 +192,13 @@
 		<script src="./static/jquery.min.js"></script>
 		<script src="./static/jquery.blockUI.js"></script>
 		<script src="./static/encoderParam.js"></script>
-		<script src="./static/module.js"></script>	
-		<script src="./static/encoder.js"></script>							
+		<script src="./static/module.js"></script>
+		<script src="./static/encoder.js"></script>
 		<script src="./static/midisend.js"></script>
 		<script src="./static/midireceive.js"></script>
-		<script src="./static/moduknob.js"></script>		
+		<script src="./static/moduknob.js"></script>
 		<script src="./static/files.js"></script>
 		<script src="./static/sequence.js"></script>
 		<script src="./static/huebee.pkgd.js"></script>
-	
+
 </body></html>
